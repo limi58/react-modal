@@ -102,13 +102,20 @@ var Modal = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement('div', { style: this.state.layerStl, onClick: function onClick() {
+        { className: this.props.modalClassName },
+        _react2.default.createElement('div', {
+          style: this.state.layerStl,
+          onClick: function onClick() {
             return _this2.onHide();
-          } }),
+          },
+          className: this.props.layerClassName || ''
+        }),
         _react2.default.createElement(
           'div',
-          { style: this.state.contentStl },
+          {
+            style: this.state.contentStl,
+            className: this.props.contentClassName || ''
+          },
           this.props.children
         )
       );

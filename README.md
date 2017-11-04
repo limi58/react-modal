@@ -28,6 +28,12 @@ import Modal from 'm-react-modal'
 ```js
 y: '50px'
 
+modalClassName: ''
+
+layerClassName: ''
+
+contentClassName: ''
+
 layerStl: {
   position: 'fixed',
   background: 'rgba(0,0,0,0.12)',

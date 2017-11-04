@@ -65,9 +65,17 @@ class Modal extends React.Component {
   render() {
     const { status } = this.props
     return (
-      <div>
-        <div style={this.state.layerStl} onClick = { () => this.onHide() }></div>
-        <div style={this.state.contentStl}>
+      <div className={this.props.modalClassName}>
+        <div 
+          style={this.state.layerStl} 
+          onClick = { () => this.onHide() }
+          className={this.props.layerClassName || ''}
+        >
+        </div>
+        <div 
+          style={this.state.contentStl} 
+          className={this.props.contentClassName || ''}
+        >
           { this.props.children }
         </div>
       </div>
